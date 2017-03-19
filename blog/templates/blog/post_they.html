@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	<div>
+		<p>사람들의 이야기를 들을 수 있어요</p>
+	</div>
+    <div>
+        {% for post in posts %}
+            <div class="post">
+                <div class="date">
+                <p>published: {{ post.published_date }}</p>
+                </div>
+                <p>{{ post.how }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	<div>
+		<p>나의 이야기를 들려주세요</p>
+	</div>
+
+	<div>
+		<form method="POST" class="post-form">{% csrf_token %}
+			{{form.as_p}}
+		<button type="save" class="save btn btn-default">보내기</button>
+		</form>
+	</div>
+{% endblock %}

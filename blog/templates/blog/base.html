@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>나는 요즘에</title>
+    </head>
+    <body>
+        <div class="page-header">
+            <h2><a href="/">나는 요즘에</a></h2>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
